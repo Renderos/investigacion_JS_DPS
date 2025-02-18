@@ -7,11 +7,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Carrito de Compras</h1>
-    <div id="productos"></div>
-    <h2>Carrito</h2>
-    <div id="carrito"></div>
-    <button onclick="generarFactura()">Finalizar Compra</button>
+    <div class="contenedor">
+        <div class="productos-carrito">
+            <h1>Carrito de Compras</h1>
+            <div id="productos"></div>
+            <h2>Carrito</h2>
+            <div id="carrito"></div>
+            <button onclick="generarFactura()">Finalizar Compra</button>
+        </div>
+        <div class="vista-previa">
+            <h2>Vista previa del producto</h2>
+            <img id="imagen-previa" src="" alt="Selecciona un producto">
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

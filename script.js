@@ -11,13 +11,17 @@ function mostrarProductos() {
     contenedor.innerHTML = "";
     productos.forEach(p => {
         contenedor.innerHTML += `
-            <div class="producto">
+            <div class="producto" onclick="actualizarVistaPrevia('${p.imagen}')">
                 <img src="${p.imagen}" alt="${p.nombre}">
                 <span>${p.nombre} - $${p.precio} (Disponible: ${p.cantidad})</span>
                 <button onclick="agregarAlCarrito(${p.id}, 1)">Agregar</button>
             </div>
         `;
     });
+}
+
+function actualizarVistaPrevia(imagen) {
+    document.getElementById("imagen-previa").src = imagen;
 }
 
 function agregarAlCarrito(id, cantidad) {
