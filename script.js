@@ -62,5 +62,16 @@ function actualizarCarrito() {
     contenedor.innerHTML += `<h3>Total: $${total}</h3>`;
 }
 
+function generarFactura() {
+    let factura = "Factura:\n";
+    let total = 0;
+    carrito.forEach(item => {
+        const subtotal = item.precio * item.cantidad;
+        factura += `${item.nombre} - ${item.cantidad} x $${item.precio} = $${subtotal}\n`;
+        total += subtotal;
+    });
+    factura += `Total: $${total}`;
+    alert(factura);
+}
 
 mostrarProductos();
