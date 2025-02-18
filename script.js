@@ -1,7 +1,7 @@
 const productos = [
-    { id: 1, nombre: "Producto A", precio: 10, cantidad: 5 },
-    { id: 2, nombre: "Producto B", precio: 20, cantidad: 3 },
-    { id: 3, nombre: "Producto C", precio: 15, cantidad: 8 }
+    { id: 1, nombre: "Producto A", precio: 10, cantidad: 5, imagen: "img/productoA.jpg" },
+    { id: 2, nombre: "Producto B", precio: 20, cantidad: 3, imagen: "img/productoB.jpg" },
+    { id: 3, nombre: "Producto C", precio: 15, cantidad: 8, imagen: "img/productoC.jpg" }
 ];
 
 let carrito = [];
@@ -12,6 +12,7 @@ function mostrarProductos() {
     productos.forEach(p => {
         contenedor.innerHTML += `
             <div class="producto">
+                <img src="${p.imagen}" alt="${p.nombre}">
                 <span>${p.nombre} - $${p.precio} (Disponible: ${p.cantidad})</span>
                 <button onclick="agregarAlCarrito(${p.id}, 1)">Agregar</button>
             </div>
