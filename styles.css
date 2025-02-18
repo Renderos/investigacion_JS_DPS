@@ -1,14 +1,46 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #e3f2fd;
+    color: #01579b;
     margin: 20px;
+    text-align: center;
 }
+
+h1, h2 {
+    color: #0288d1;
+}
+
 .producto, .carrito-item {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    border: 1px solid #ddd;
-    margin-bottom: 5px;
+    border: 1px solid #0288d1;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    align-items: center;
 }
+
+.producto img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ffd600;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ffca28;
+}
+
 #carrito {
     margin-top: 20px;
 }
