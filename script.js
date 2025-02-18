@@ -35,5 +35,16 @@ function agregarAlCarrito(id, cantidad) {
     actualizarCarrito();
 }
 
+function eliminarDelCarrito(id) {
+    const index = carrito.findIndex(p => p.id === id);
+    if (index !== -1) {
+        const producto = carrito[index];
+        productos.find(p => p.id === id).cantidad += producto.cantidad;
+        carrito.splice(index, 1);
+    }
+    actualizarCarrito();
+}
+
+
 
 mostrarProductos();
