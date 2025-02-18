@@ -26,13 +26,14 @@ function agregarAlCarrito(id, cantidad) {
         if (itemEnCarrito) {
             itemEnCarrito.cantidad += cantidad;
         } else {
-            carrito.push({ ...producto, cantidad });
+            carrito.push({ id: producto.id, nombre: producto.nombre, precio: producto.precio, cantidad });
         }
         producto.cantidad -= cantidad;
     } else {
         alert("Cantidad no disponible");
     }
     actualizarCarrito();
+    mostrarProductos();
 }
 
 function eliminarDelCarrito(id) {
@@ -43,6 +44,7 @@ function eliminarDelCarrito(id) {
         carrito.splice(index, 1);
     }
     actualizarCarrito();
+    mostrarProductos();
 }
 
 function actualizarCarrito() {
@@ -63,6 +65,10 @@ function actualizarCarrito() {
 }
 
 function generarFactura() {
+    if (carrito.length === 0) {
+        alert("El carrito está vacío");
+        return;
+    }
     let factura = "Factura:\n";
     let total = 0;
     carrito.forEach(item => {
@@ -72,6 +78,9 @@ function generarFactura() {
     });
     factura += `Total: $${total}`;
     alert(factura);
+    carrito = [];
+    actualizarCarrito();
+    mostrarProductos();
 }
 
 mostrarProductos();
