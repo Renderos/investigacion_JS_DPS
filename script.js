@@ -1,7 +1,7 @@
 const productos = [
-    { id: 1, nombre: "Producto A", precio: 10, cantidad: 5, imagen: "img/productoA.jpg" },
-    { id: 2, nombre: "Producto B", precio: 20, cantidad: 3, imagen: "img/productoB.jpg" },
-    { id: 3, nombre: "Producto C", precio: 15, cantidad: 8, imagen: "img/productoC.jpg" }
+    { id: 1, nombre: "Control inalámbrico", precio: 10, cantidad: 5, imagen: "img/productoA.jpg" },
+    { id: 2, nombre: "Auriculares gamer", precio: 20, cantidad: 3, imagen: "img/productoB.jpg" },
+    { id: 3, nombre: "Combo teclado + mouse gamer", precio: 15, cantidad: 8, imagen: "img/productoC.jpg" }
 ];
 
 let carrito = [];
