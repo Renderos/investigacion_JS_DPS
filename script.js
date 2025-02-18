@@ -74,13 +74,17 @@ function generarFactura() {
         alert("El carrito está vacío");
         return;
     }
-    let factura = "Factura:\n";
+    let factura = "Factura:n";
+    factura += "----------\n";
+    factura += "Productos:\n";
+
     let total = 0;
     carrito.forEach(item => {
         const subtotal = item.precio * item.cantidad;
         factura += `${item.nombre} - ${item.cantidad} x $${item.precio} = $${subtotal}\n`;
         total += subtotal;
     });
+    factura += `----------\n`;
     factura += `Total: $${total}`;
     alert(factura);
     carrito = [];
