@@ -45,6 +45,22 @@ function eliminarDelCarrito(id) {
     actualizarCarrito();
 }
 
+function actualizarCarrito() {
+    const contenedor = document.getElementById("carrito");
+    contenedor.innerHTML = "";
+    let total = 0;
+    carrito.forEach(item => {
+        const subtotal = item.precio * item.cantidad;
+        total += subtotal;
+        contenedor.innerHTML += `
+            <div class="carrito-item">
+                <span>${item.nombre} - ${item.cantidad} x $${item.precio} = $${subtotal}</span>
+                <button onclick="eliminarDelCarrito(${item.id})">Eliminar</button>
+            </div>
+        `;
+    });
+    contenedor.innerHTML += `<h3>Total: $${total}</h3>`;
+}
 
 
 mostrarProductos();
