@@ -1,8 +1,10 @@
 # Diseño y Programación de Software Multiplataforma DPS941 G01T
 
-# Trabajo de investigación 
+Link al sitio: https://renderos.github.io/investigacion_JS_DPS/
 
-# Integrantes:
+Trabajo de investigación 
+
+Integrantes:
 
 Ronald Ernesto Renderos Ramos RR150535
 #
