@@ -74,7 +74,7 @@ function generarFactura() {
         alert("El carrito está vacío");
         return;
     }
-    let factura = "Factura:n";
+    let factura = "Factura:\n";
     factura += "----------\n";
     factura += "Productos:\n";
 
